@@ -1,3 +1,70 @@
 .about {
   padding: 64px 0;
 }
+
+.about-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  padding: 32px;
+  height: 500px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+  background-color: #242527;
+  margin-bottom: 16px;
+  border-radius: 25px;
+}
+
+.about-title-span-a {
+  color: #ed3b44;
+}
+
+.about-title-span-b {
+  color: #fafafa66;
+}
+
+.about-img {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.about-info-text {
+  font-family: Inter Tight;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+}
+
+.about-info-text br {
+  margin-bottom: 32px;
+}
+
+.about-info-expand-button {
+  width: 36px;
+  height: 36px;
+}
+
+.about-info-title {
+  margin-bottom: 12px;
+}
+
+/* TODO: 
+  play with swiper to make tech stack block 
+  use accordion to make foldable list for about-info
+  fix styles after that
+  */

@@ -1,0 +1,21 @@
+.faq {
+  margin-bottom: 64px;
+}
+
+.faq-title {
+  margin-bottom: 32px;
+}
+
+.faq-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-answer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  color: #fafafa99;
+}

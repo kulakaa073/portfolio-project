@@ -1,0 +1,51 @@
+.benefits {
+  padding-bottom: 64px;
+}
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.benefits-title {
+  margin-bottom: 32px;
+}
+
+.benefits-card {
+  padding: 24px;
+  background-color: #242527;
+  border-radius: 20px;
+}
+
+.benefits-card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 64px;
+  background-color: #ed3b44;
+  border-radius: 10px;
+}
+
+.benefits-card-title {
+  margin-bottom: 8px;
+}
+
+.benefits-card-descr {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  color: #fafafa99;
+}
+
+.order-project-button {
+  border: 1px solid #fafafa33;
+  border-radius: 60px;
+  background-color: transparent;
+  padding: 18px 36px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -2%;
+  color: #fafafa;
+}
