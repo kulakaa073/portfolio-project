@@ -16,7 +16,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  font-family: Inter Tight, sans-serif;
+  color: #fafafa;
+  background-color: #1c1d20;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -27,6 +34,7 @@ body {
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
 }

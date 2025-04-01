@@ -1,0 +1,41 @@
+/* TODO: 
+  fix socials position
+  add background image */
+
+.hero-container {
+  padding: 281px 16px;
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.socials {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.socials > li {
+  width: 37px;
+  height: 37px;
+  background-color: transparent;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #fafafa33;
+  border-radius: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -2%;
+  color: #fafafa;
+}
+.socials li:last-child {
+  padding: 10px 12px;
+  width: unset;
+}
