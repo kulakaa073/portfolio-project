@@ -18,24 +18,36 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/portfolio-project/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-project/assets/index-B8LbGFTh.css">
+    <link rel="modulepreload" crossorigin href="/portfolio-project/assets/vendor-7cID1GTj.js">
+    <link rel="stylesheet" crossorigin href="/portfolio-project/assets/index-DX-3uGkB.css">
   </head>
   <body>
-    <header>
-  <div class="logo"></div>
-  <nav class="navigation">
-    <button class="nav-menu-button">Menu</button>
-    <ul class="nav-list">
-      <li>
-        <a href="#about" class="nav-link">About me</a>
-      </li>
-      <li><a href="#benefits" class="nav-link">Benefits</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#faq" class="nav-link">FAQ</a></li>
-    </ul>
-  </nav>
-  <button class="burger-menu">☰</button>
-  <button class="header-order-button" href="">Order the project</button>
+    <header class="header">
+  <div class="container header-container">
+    <div class="header-logo">
+      <a href="./" class="header-logo-link"
+        ><img src="" alt="logo-image" class="header-logo-image" />
+        <svg class="header-logo-svg" width="100" heigh="20">
+          <use href="/portfolio-project/assets/logo-CUW174v0.svg" alt="logo"></use>
+        </svg>
+      </a>
+    </div>
+    <nav class="navigation">
+      <p class="nav-menu-button">Menu</p>
+      <ul class="nav-list visually-hidden">
+        <li>
+          <a href="#about" class="nav-link">About me</a>
+        </li>
+        <li><a href="#benefits" class="nav-link">Benefits</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+    <button class="burger-menu">☰</button>
+    <a class="header-order-button visually-hidden" href="#work-together">
+      Order the project
+    </a>
+  </div>
 </header>
 
     <main>
@@ -102,73 +114,85 @@
       </p>
       <img src="" alt="about-developer-image" class="about-img" />
       <ul class="about-info">
-        <li>
+        <li class="about-item">
           <h2 class="about-info-title">
-            About me
             <button class="about-info-expand-button" type="button">
-              expand
+              About me
+            </button>
+          </h2>
+          <div class="about-panel-wrap">
+            <p class="about-info-text">
+              I am Lloyd Jefferson, a talented programmer with extensive
+              expertise in software development. I have an understanding of
+              different programming languages and technologies, always ready to
+              improve my skills. I always follow the latest trends and look for
+              unconventional, creative solutions to problems. I have a high
+              level of analytical skills and am able to effectively solve even
+              the most difficult tasks encountered on the way. Able to work both
+              independently and in a team. I can effectively cooperate with
+              colleagues, exchanging ideas and finding optimal solutions.
+              Professional maturity allows you to calmly cope with challenges
+              and stressful situations, while maintaining a high quality of
+              work.I am always looking for opportunities for self-improvement. I
+              actively study new technologies and practices to stay abreast of
+              the latest innovations. I have a strong understanding of various
+              programming languages, frameworks and architectural concepts that
+              allow me to create efficient and scalable software.
+            </p>
+          </div>
+        </li>
+        <li class="about-item">
+          <h2 class="about-info-title">
+            <button class="about-info-expand-button" type="button">Role</button>
+          </h2>
+
+          <div class="about-panel-wrap">
+            <p class="about-info-text">
+              Frontend development HeadlessCMS,Wordpress Blender(enjoy)
+            </p>
+          </div>
+        </li>
+        <li class="about-item">
+          <h2 class="about-info-title">
+            <button class="about-info-expand-button" type="button">
+              Education
             </button>
           </h2>
 
-          <p class="about-info-text">
-            I am Lloyd Jefferson, a talented programmer with extensive expertise
-            in software development. I have an understanding of different
-            programming languages and technologies, always ready to improve my
-            skills. I always follow the latest trends and look for
-            unconventional, creative solutions to problems. I have a high level
-            of analytical skills and am able to effectively solve even the most
-            difficult tasks encountered on the way. <br />Able to work both
-            independently and in a team. I can effectively cooperate with
-            colleagues, exchanging ideas and finding optimal solutions.
-            Professional maturity allows you to calmly cope with challenges and
-            stressful situations, while maintaining a high quality of work.I am
-            always looking for opportunities for self-improvement. I actively
-            study new technologies and practices to stay abreast of the latest
-            innovations. I have a strong understanding of various programming
-            languages, frameworks and architectural concepts that allow me to
-            create efficient and scalable software.
-          </p>
-        </li>
-        <li>
-          <h2 class="about-info-title">Role</h2>
-          <button class="about-info-expand-button" type="button">expand</button>
-          <p class="about-info-text">
-            <br />Frontend development <br />HeadlessCMS,Wordpress
-            <br />Blender(enjoy)
-          </p>
-        </li>
-        <li>
-          <h2 class="about-info-title">Education</h2>
-          <button class="about-info-expand-button" type="button">expand</button>
-          <p class="about-info-text">
-            <br />2018 - 2019 / Frontend Development Diploma, GoIT IT School,
-            New York <br />2019 - 2020 / Advanced Web Development Certificate,
-            GoIT IT School, New York <br />2020 - 2022 / Advanced Blender
-            Animation Techniques, Udemy
-          </p>
+          <div class="about-panel-wrap">
+            <p class="about-info-text">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York 2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York 2020 - 2022 / Advanced Blender Animation
+              Techniques, Udemy
+            </p>
+          </div>
         </li>
       </ul>
-      <ul class="about-tech-stack">
-        <li>
-          <p>HTML/CSS</p>
-        </li>
-        <li>
-          <p>JavaScript</p>
-        </li>
-        <li>
-          <p>React</p>
-        </li>
-        <li>
-          <p>Node. js</p>
-        </li>
-        <li>
-          <p>React Native</p>
-        </li>
-        <li>
-          <p>Soft skills</p>
-        </li>
-      </ul>
-      <button type="button" class="about-navigation-button">next</button>
+      <div class="swiper">
+        <ul class="about-tech-stack swiper-wrapper">
+          <li class="swiper-slide">
+            <p>HTML/CSS</p>
+          </li>
+          <li class="swiper-slide">
+            <p>JavaScript</p>
+          </li>
+          <li class="swiper-slide">
+            <p>React</p>
+          </li>
+          <li class="swiper-slide">
+            <p>Node. js</p>
+          </li>
+          <li class="swiper-slide">
+            <p>React Native</p>
+          </li>
+          <li class="swiper-slide">
+            <p>Soft skills</p>
+          </li>
+        </ul>
+        <button type="button" class="about-navigation-button-next">next</button>
+        <button type="button" class="about-navigation-button-prev">prev</button>
+      </div>
     </div>
   </div>
 </section>
@@ -344,7 +368,7 @@
 
     </main>
     <!-- footer -->
-<footer class="work-together">
+<footer class="work-together" id="work-together">
   <div class="container">
     <div class="footer-title-wrap">
       <img src="" alt="logo" class="footer-logo" />
@@ -376,7 +400,20 @@
   </div>
 </footer>
 
-    <div class="mobile-menu"></div>
+    <div class="mobile-menu-overlay">
+  <div class="mobile-menu">
+    <button class="mobile-menu-close-button">X</button>
+    <ul class="mobile-menu-nav">
+      <li><a href="#about" class="mobile-menu-nav-link">About me</a></li>
+      <li><a href="#benefits" class="mobile-menu-nav-link">Benefits</a></li>
+      <li><a href="#projects" class="mobile-menu-nav-link">Projects</a></li>
+      <li><a href="#faq" class="mobile-menu-nav-link">FAQ</a></li>
+    </ul>
+    <a class="mobile-menu-order-button" href="#work-together">
+      Order the project
+    </a>
+  </div>
+</div>
 
   </body>
 </html>
