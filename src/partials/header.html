@@ -1,16 +1,27 @@
-<header>
-  <div class="logo"></div>
-  <nav class="navigation">
-    <button class="nav-menu-button">Menu</button>
-    <ul class="nav-list">
-      <li>
-        <a href="#about" class="nav-link">About me</a>
-      </li>
-      <li><a href="#benefits" class="nav-link">Benefits</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#faq" class="nav-link">FAQ</a></li>
-    </ul>
-  </nav>
-  <button class="burger-menu">☰</button>
-  <button class="header-order-button" href="">Order the project</button>
+<header class="header">
+  <div class="container header-container">
+    <div class="header-logo">
+      <a href="./" class="header-logo-link"
+        ><img src="" alt="logo-image" class="header-logo-image" />
+        <svg class="header-logo-svg" width="100" heigh="20">
+          <use href="./img/svg/logo.svg" alt="logo"></use>
+        </svg>
+      </a>
+    </div>
+    <nav class="navigation">
+      <p class="nav-menu-button">Menu</p>
+      <ul class="nav-list visually-hidden">
+        <li>
+          <a href="#about" class="nav-link">About me</a>
+        </li>
+        <li><a href="#benefits" class="nav-link">Benefits</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+    <button class="burger-menu">☰</button>
+    <a class="header-order-button visually-hidden" href="#work-together">
+      Order the project
+    </a>
+  </div>
 </header>

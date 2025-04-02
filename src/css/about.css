@@ -1,5 +1,5 @@
 .about {
-  padding: 64px 0;
+  padding: 64px 0 32px 0;
 }
 
 .about-wrap {
@@ -18,6 +18,12 @@
   background-color: #242527;
   margin-bottom: 16px;
   border-radius: 25px;
+}
+.about-item.js-enabled .about-panel-wrap {
+  visibility: hidden;
+}
+.about-item.is-active .about-panel-wrap {
+  visibility: visible;
 }
 
 .about-title-span-a {
