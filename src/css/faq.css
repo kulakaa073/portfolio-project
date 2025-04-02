@@ -20,3 +20,10 @@
   letter-spacing: -2%;
   color: #fafafa99;
 }
+
+.about-item.js-enabled .about-panel-wrap {
+  visibility: hidden;
+}
+.about-item.is-active .about-panel-wrap {
+  visibility: visible;
+}

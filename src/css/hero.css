@@ -2,8 +2,9 @@
   fix socials position
   add background image */
 
-.hero-container {
-  padding: 281px 16px;
+.hero {
+  padding: 281px 0;
+  background-image: url(../img/hero-cover-red@1x.png);
 }
 
 .hero-title {
@@ -19,6 +20,8 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  gap: 4px;
+  bottom: -249px;
 }
 
 .socials > li {

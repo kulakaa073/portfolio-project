@@ -19,10 +19,11 @@
   margin-bottom: 16px;
   border-radius: 25px;
 }
-.about-item.js-enabled .about-panel-wrap {
+
+.faq-question-card.js-enabled .faq-answer {
   visibility: hidden;
 }
-.about-item.is-active .about-panel-wrap {
+.faq-question-card.is-active .faq-answer {
   visibility: visible;
 }
 
@@ -39,6 +40,8 @@
   width: 100%;
   overflow: hidden;
   border-radius: 24px;
+  background-color: aliceblue;
+  margin-bottom: 32px;
 }
 
 .about-info {
@@ -69,8 +72,34 @@
   margin-bottom: 12px;
 }
 
-/* TODO: 
-  play with swiper to make tech stack block 
-  use accordion to make foldable list for about-info
-  fix styles after that
-  */
+.about-swiper {
+  width: 260px;
+  overflow: hidden;
+  margin: 0 !important;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+}
+
+.tech-name p {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 80px;
+  background-color: #ed3b44;
+}
+
+.swiper-button-next {
+  cursor: pointer;
+}
+
+.tech-stack-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

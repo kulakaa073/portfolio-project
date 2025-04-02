@@ -39,6 +39,7 @@
 }
 
 .order-project-button {
+  display: inline-block;
   border: 1px solid #fafafa33;
   border-radius: 60px;
   background-color: transparent;

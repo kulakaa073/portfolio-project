@@ -7,7 +7,8 @@
 }
 
 .projects-list {
-  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
 }
 
 .project-card {
@@ -16,6 +17,8 @@
 }
 
 .project-card-wrap {
+  box-sizing: border-box;
+  width: 343px;
   padding: 32px;
   background-color: #fafafa;
   border-top-left-radius: inherit;
@@ -68,9 +71,27 @@
   align-items: center;
   justify-content: center;
 }
+
 .project-image {
   width: 311px;
   height: 195px;
   overflow: hidden;
   object-fit: cover;
+}
+
+.projects-swiper {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.project-swiper-controlls-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.project-list-controlls-prev,
+.project-list-controlls-next {
+  cursor: pointer;
 }

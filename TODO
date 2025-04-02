@@ -1,18 +1,19 @@
 Covers section: Tiled image made from "projects" images 
-Mobile menu: Styles 
+Mobile menu: +-Styles 
 About section:  Add developer's image in the middle block 
-                Play with swiper to make tech stack block 
-                Use accordion to make foldable list for about-info 
+                ++Play with swiper to make tech stack block 
+                ++Use accordion to make foldable list for about-info 
+                ++Clean up html for swiper
                 Fix styles after that 
 Benefits section: Add svg icons for cards 
-Hero section:   Fix socials position 
-                Add background image 
+Hero section:   ++Fix socials position 
+                +-Add background image 
 Projects section:   Add projects images 
-                    Add swiper to section 
-FAQ section:    Add accordion 
+                    ++Add swiper to section 
+FAQ section:    ++Add accordion 
                 Fix styles after that 
 ++ !! Change margins on sections to paddings? !!
 Reviews section: Add swiper
 Footer section: Add form sending script
                 Add pop-up on sending
-Header section styles
++-Header section styles
