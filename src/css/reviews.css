@@ -1,3 +1,37 @@
 .reviews {
   padding: 64px 0;
 }
+
+.reviews-title {
+  margin-bottom: 32px;
+}
+
+.reviews-list {
+  margin-bottom: 32px;
+}
+
+.review-card {
+  border: 1px solid #fafafa33;
+  border-radius: 20px;
+  padding: 32px 24px;
+  background-color: transparent;
+}
+
+.review-img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+  border-radius: 10px;
+}
+
+.reviewer-name {
+  margin-bottom: 8px;
+}
+
+.review-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  color: #fafafa99;
+}
