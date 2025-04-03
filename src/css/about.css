@@ -20,10 +20,11 @@
   border-radius: 25px;
 }
 
-.faq-question-card.js-enabled .faq-answer {
+.about-item.js-enabled .about-panel-wrap {
   visibility: hidden;
 }
-.faq-question-card.is-active .faq-answer {
+
+.about-item.is-active .faq-answer {
   visibility: visible;
 }
 

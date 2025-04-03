@@ -7,7 +7,11 @@
 }
 
 .reviews-list {
-  margin-bottom: 32px;
+  display: flex;
+}
+
+.review-card-wrap {
+  width: 343px;
 }
 
 .review-card {
@@ -34,4 +38,26 @@
   line-height: 1.5;
   letter-spacing: -2%;
   color: #fafafa99;
+  max-width: 295px;
+}
+
+.reviews-fetch-error {
+  display: none;
+}
+
+.reviews-swiper {
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.review-swiper-controlls-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.review-swiper-controlls-prev,
+.review-swiper-controlls-next {
+  cursor: pointer;
 }

@@ -34,6 +34,7 @@
   padding: 0 0 20px 0;
   background-color: transparent;
   height: 44px;
+  margin-bottom: 32px;
 }
 
 .footer-form label:first-child input {
@@ -41,7 +42,7 @@
 }
 
 .footer-form {
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .footer-form input::placeholder {
@@ -63,10 +64,10 @@
   background-color: #ed3b44;
   color: #fafafa;
   border: none;
-  margin-bottom: 64px;
 }
 
 .footer-address a {
+  display: inline-block;
   height: 37px;
   background-color: transparent;
   text-align: center;
@@ -82,4 +83,13 @@
 
 .footer-phone {
   padding: 10px 12px;
+}
+
+.submit-pop-up {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #ed3b44;
 }

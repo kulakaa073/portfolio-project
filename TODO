@@ -13,7 +13,10 @@ Projects section:   Add projects images
 FAQ section:    ++Add accordion 
                 Fix styles after that 
 ++ !! Change margins on sections to paddings? !!
-Reviews section: Add swiper
-Footer section: Add form sending script
-                Add pop-up on sending
+Reviews section: ++Add swiper
+                Fix styles
+Footer section: ++Add form sending script
+                +-Add pop-up on sending
+                Finish pop-up scripts to close
+                Styles
 +-Header section styles

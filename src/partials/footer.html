@@ -7,20 +7,29 @@
         Let's <span class="footer-title-span">work</span> together
       </h2>
     </div>
-    <form action="" class="footer-form">
-      <label><input type="email" placeholder="clients@gmail.com" /></label>
-      <label><input type="text" placeholder="comments" /></label>
+    <form class="footer-form" autocomplete="off">
+      <label
+        ><input
+          type="email"
+          name="email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          required
+      /></label>
+      <label><input type="text" name="comment" placeholder="comments" /></label>
+      <button class="footer-form-submit" type="submit">Send</button>
     </form>
-    <button class="footer-form-submit" type="submit">Send</button>
-    <div class="submit-pop-up visually-hidden">
-      <button type="button" class="submit-pop-up-close-button">X</button>
-      <h3 class="submit-pop-up-title">
-        Thank you for your interest in cooperation!
-      </h3>
-      <p class="submit-pop-up-text">
-        The manager will contact you shortly to discuss further details and
-        opportunities for cooperation. Please stay in touch.
-      </p>
+    <div class="submit-pop-up">
+      <div class="pop-up-wrap">
+        <button type="button" class="submit-pop-up-close-button">X</button>
+        <h3 class="submit-pop-up-title">
+          Thank you for your interest in cooperation!
+        </h3>
+        <p class="submit-pop-up-text">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
     </div>
     <address class="footer-address">
       <a class="footer-email" href="mailto:lloydjefferson@gmail.com"

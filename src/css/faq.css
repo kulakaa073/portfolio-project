@@ -21,9 +21,9 @@
   color: #fafafa99;
 }
 
-.about-item.js-enabled .about-panel-wrap {
+.faq-question-card.js-enabled .faq-answer {
   visibility: hidden;
 }
-.about-item.is-active .about-panel-wrap {
+.faq-question-card.is-active .faq-answer {
   visibility: visible;
 }

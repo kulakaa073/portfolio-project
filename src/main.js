@@ -2,6 +2,8 @@ import Accordion from 'accordion-js';
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
+import axios from 'axios';
+import { comment } from 'postcss';
 
 const burgerMenuButton = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.mobile-menu-overlay');
@@ -12,7 +14,10 @@ const aboutInfoBlock = document.querySelector('.about-info');
 const aboutSwiperBlock = document.querySelector('.about-swiper');
 const projectsSwiperBlock = document.querySelector('.projects-swiper');
 const faqBlock = document.querySelector('.faq-questions-list');
-const reviewsBlock = document.querySelector('.reviews-swiper');
+const reviewsSwiperBlock = document.querySelector('.reviews-swiper');
+const reviewsBlock = document.querySelector('.reviews-list');
+const contactForm = document.querySelector('.footer-form');
+const submitPopUp = document.querySelector('.submit-pop-up');
 
 const aboutAccordionOptions = {
   elementClass: 'about-item',
@@ -59,15 +64,47 @@ const projectSwiperOptions = {
     enabled: true,
     onlyInViewport: true,
   },
+  spaceBetween: 10,
 };
 
 new Swiper(projectsSwiperBlock, { ...projectSwiperOptions });
 
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
+axios
+  .get('reviews')
+  .then(function (response) {
+    renderReviewList(response.data);
+  })
+  .catch(function (err) {
+    console.log(err);
+    reviewsBlock.style.display = 'none';
+    document.querySelector('.reviews-fetch-error').style.display = 'block';
+    alert(err);
+  });
+
+function renderReviewList(renderData) {
+  const responseBlockMarkup = [];
+  renderData.forEach(item => {
+    responseBlockMarkup.push(
+      //cuz fuck you swiper
+      `<li class="review-card">
+        <div class="review-card-wrap"> 
+          <img src="${item.avatar_url}" alt="${item.author} photo" class="review-img"/>
+          <h3 class="reviewer-name">${item.author}</h3>
+          <p class="review-text">${item.review}</p>
+        </div>
+      </li>`
+    );
+  });
+  reviewsBlock.innerHTML = '';
+  reviewsBlock.insertAdjacentHTML('afterbegin', responseBlockMarkup.join(''));
+}
+
 const reviewsSwiperOptions = {
   modules: [Navigation, Keyboard],
   navigation: {
-    nextEl: '.review-controlls-next',
-    prevEl: '.review-controlls-prev',
+    nextEl: '.review-swiper-controlls-next',
+    prevEl: '.review-swiper-controlls-prev',
   },
   wrapperClass: 'reviews-list',
   slideClass: 'review-card',
@@ -75,20 +112,21 @@ const reviewsSwiperOptions = {
     enabled: true,
     onlyInViewport: true,
   },
+  spaceBetween: 10,
 };
 
-new Swiper(reviewsBlock, { ...reviewsSwiperOptions });
+new Swiper(reviewsSwiperBlock, { ...reviewsSwiperOptions });
+
+burgerMenuButton.addEventListener('click', e => {
+  mobileMenu.style.display = 'block';
+  lockScroll();
+});
 
 mobileMenu.addEventListener('click', e => {
   if (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') {
     mobileMenu.style.display = 'none';
     unlockScroll();
   }
-});
-
-burgerMenuButton.addEventListener('click', e => {
-  mobileMenu.style.display = 'block';
-  lockScroll();
 });
 
 navBlock.addEventListener('click', e => {
@@ -143,3 +181,53 @@ document.getElementById('closeOverlay').addEventListener('click', function() {
   unlockScroll();
 }); */
 //#endregion scroll lock stuff
+
+const formData = { email: '', comment: '' };
+const localStorageKey = 'feedback-form-state';
+
+if (localStorage.getItem(localStorageKey)) {
+  const savedFormData = JSON.parse(localStorage.getItem(localStorageKey));
+  formData.email = savedFormData.email;
+  formData.message = savedFormData.message;
+  contactForm.querySelector('input[name="email"]').value = formData.email;
+  contactForm.querySelector('input[name="comment"]').value = formData.comment;
+}
+
+contactForm.addEventListener('input', event => {
+  if (event.target.name === 'email') {
+    formData.email = event.target.value;
+  }
+  if (event.target.name === 'comment') {
+    formData.comment = event.target.value;
+  }
+  localStorage.setItem(localStorageKey, JSON.stringify(formData));
+});
+
+contactForm.addEventListener('submit', event => {
+  event.preventDefault();
+  if (formData.email === '' || formData.comment === '') {
+    alert('Fill please all fields');
+    return;
+  }
+  axios
+    .post('requests', formData)
+    .then(response => {
+      console.log('axios.response');
+      console.log(response);
+      showFormSuccess(response.data.title, response.data.message);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  localStorage.removeItem(localStorageKey);
+  formData.email = '';
+  formData.comment = '';
+  contactForm.reset();
+});
+
+function showFormSuccess(messageTitle, messageContent) {
+  submitPopUp.querySelector('.submit-pop-up-title').textContent = messageTitle;
+  submitPopUp.querySelector('.submit-pop-up-text').textContent = messageContent;
+  submitPopUp.style.display = 'block';
+  lockScroll();
+}
