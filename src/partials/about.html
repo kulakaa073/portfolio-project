@@ -8,7 +8,31 @@
         <span class="about-title-span-b">websites</span> that reflect each
         client's unique personality.
       </p>
-      <img src="" alt="about-developer-image" class="about-img" />
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="img/about-image@1x.png 1x, img/about-image@2x.png 2x"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="img/about-image@1x.png 1x, img/about-image@2x.png 2x"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            img/about-image-mobile@1x.png 1x,
+            img/about-image-mobile@2x.png 2x
+          "
+        />
+        <img
+          src="img/about-image-mobile@1x.png"
+          alt="about-developer-image"
+          class="about-img"
+          width="343"
+          height="500"
+        />
+      </picture>
+      <!--accordion-->
       <ul class="about-info">
         <li class="about-item">
           <h2 class="about-info-title">
@@ -24,16 +48,17 @@
               improve my skills. I always follow the latest trends and look for
               unconventional, creative solutions to problems. I have a high
               level of analytical skills and am able to effectively solve even
-              the most difficult tasks encountered on the way. Able to work both
-              independently and in a team. I can effectively cooperate with
-              colleagues, exchanging ideas and finding optimal solutions.
-              Professional maturity allows you to calmly cope with challenges
-              and stressful situations, while maintaining a high quality of
-              work.I am always looking for opportunities for self-improvement. I
-              actively study new technologies and practices to stay abreast of
-              the latest innovations. I have a strong understanding of various
-              programming languages, frameworks and architectural concepts that
-              allow me to create efficient and scalable software.
+              the most difficult tasks encountered on the way.<br />
+              Able to work both independently and in a team. I can effectively
+              cooperate with colleagues, exchanging ideas and finding optimal
+              solutions. Professional maturity allows you to calmly cope with
+              challenges and stressful situations, while maintaining a high
+              quality of work.I am always looking for opportunities for
+              self-improvement. I actively study new technologies and practices
+              to stay abreast of the latest innovations. I have a strong
+              understanding of various programming languages, frameworks and
+              architectural concepts that allow me to create efficient and
+              scalable software.
             </p>
           </div>
         </li>

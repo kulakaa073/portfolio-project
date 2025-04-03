@@ -28,8 +28,18 @@
   fill: #fafafa;
 }
 
+.header-logo-svg:hover,
+.header-logo-svg:focus {
+  fill: #ed3b44;
+}
+
 .burger-menu-icon {
   fill: #fafafa;
   width: 28px;
   height: 28px;
+}
+
+.burger-menu-icon:hover,
+.burger-menu-icon:focus {
+  fill: #ed3b44;
 }

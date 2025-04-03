@@ -37,6 +37,12 @@
   line-height: 1;
   letter-spacing: -2%;
   color: #fafafa;
+  cursor: pointer;
+}
+
+.socials li:hover,
+.socials li:focus {
+  border: 1px solid #fafafa;
 }
 
 .socials li:last-child {
