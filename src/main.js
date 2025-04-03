@@ -12,6 +12,7 @@ const aboutInfoBlock = document.querySelector('.about-info');
 const aboutSwiperBlock = document.querySelector('.about-swiper');
 const projectsSwiperBlock = document.querySelector('.projects-swiper');
 const faqBlock = document.querySelector('.faq-questions-list');
+const reviewsBlock = document.querySelector('.reviews-swiper');
 
 const aboutAccordionOptions = {
   elementClass: 'about-item',
@@ -62,16 +63,32 @@ const projectSwiperOptions = {
 
 new Swiper(projectsSwiperBlock, { ...projectSwiperOptions });
 
-burgerMenuButton.addEventListener('click', e => {
-  mobileMenu.style.display = 'block';
-  lockScroll();
-});
+const reviewsSwiperOptions = {
+  modules: [Navigation, Keyboard],
+  navigation: {
+    nextEl: '.review-controlls-next',
+    prevEl: '.review-controlls-prev',
+  },
+  wrapperClass: 'reviews-list',
+  slideClass: 'review-card',
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+};
+
+new Swiper(reviewsBlock, { ...reviewsSwiperOptions });
 
 mobileMenu.addEventListener('click', e => {
   if (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') {
     mobileMenu.style.display = 'none';
     unlockScroll();
   }
+});
+
+burgerMenuButton.addEventListener('click', e => {
+  mobileMenu.style.display = 'block';
+  lockScroll();
 });
 
 navBlock.addEventListener('click', e => {
