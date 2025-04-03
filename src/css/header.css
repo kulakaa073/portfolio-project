@@ -13,13 +13,23 @@
 }
 
 .burger-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
   cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  color: #fafafa;
+}
+
+.header-logo-link {
+  display: flex;
+  gap: 8px;
+  align-items: baseline-top;
+}
+
+.header-logo-svg {
+  width: 84px;
+  height: 19px;
+  fill: #fafafa;
+}
+
+.burger-menu-icon {
+  fill: #fafafa;
+  width: 28px;
+  height: 28px;
 }

@@ -1,5 +1,50 @@
 .covers {
   height: 508px;
   background-color: aliceblue;
-  color: black;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.marquee-line {
+  width: 150%;
+  height: 60px;
+  transform: rotate(20deg); /* Changed from 45deg to 20deg for flatter angle */
+  transform-origin: center; /* Changed transform origin to center */
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.05);
+  left: -10%; /* Pull back to prevent cutoff */
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee-image {
+  height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

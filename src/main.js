@@ -3,7 +3,6 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import axios from 'axios';
-import { comment } from 'postcss';
 
 const burgerMenuButton = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.mobile-menu-overlay');
@@ -86,7 +85,7 @@ function renderReviewList(renderData) {
   const responseBlockMarkup = [];
   renderData.forEach(item => {
     responseBlockMarkup.push(
-      //cuz fuck you swiper
+      //div cuz fuck you swiper
       `<li class="review-card">
         <div class="review-card-wrap"> 
           <img src="${item.avatar_url}" alt="${item.author} photo" class="review-img"/>
@@ -158,6 +157,7 @@ function lockScroll() {
 // Function to unlock scrolling
 function unlockScroll() {
   // Get the stored scroll position
+
   const scrollY = document.body.dataset.scrollY;
 
   // Remove the fixed positioning
@@ -167,19 +167,11 @@ function unlockScroll() {
   document.body.style.overflowY = '';
 
   // Scroll back to the original position
+  // Change scroll behavior so it wont give you epilepsy for non-top locks
+  document.querySelector('html').styles.scrollBehavior = 'auto';
   window.scrollTo(0, parseInt(scrollY || '0'));
+  document.querySelector('html').styles.scrollBehavior = 'smooth';
 }
-
-// Example usage
-/* document.getElementById('openOverlay').addEventListener('click', function() {
-  document.getElementById('overlay').style.display = 'block';
-  lockScroll();
-});
-
-document.getElementById('closeOverlay').addEventListener('click', function() {
-  document.getElementById('overlay').style.display = 'none';
-  unlockScroll();
-}); */
 //#endregion scroll lock stuff
 
 const formData = { email: '', comment: '' };
@@ -212,8 +204,6 @@ contactForm.addEventListener('submit', event => {
   axios
     .post('requests', formData)
     .then(response => {
-      console.log('axios.response');
-      console.log(response);
       showFormSuccess(response.data.title, response.data.message);
     })
     .catch(error => {
@@ -231,3 +221,89 @@ function showFormSuccess(messageTitle, messageContent) {
   submitPopUp.style.display = 'block';
   lockScroll();
 }
+
+submitPopUp.addEventListener('click', e => {
+  if (
+    e.target.classList.contains('submit-pop-up-close-button') ||
+    e.target === submitPopUp
+  ) {
+    submitPopUp.style.display = 'none';
+    unlockScroll();
+  }
+});
+
+//#region marquee
+const marqueeCconfig = {
+  lines: 5,
+  imagesPerLine: 10,
+  spacing: 110, // Spacing between lines
+};
+
+// Function to create a marquee line
+function createMarqueeLine(index) {
+  const line = document.createElement('div');
+  line.className = 'marquee-line';
+
+  // Center lines vertically by calculating middle position
+  const containerHeight = 700; // Should match the container height in CSS
+  const totalHeight = marqueeCconfig.lines * marqueeCconfig.spacing;
+  const startY = (containerHeight - totalHeight) / 2;
+
+  // Position the line in the middle of the container
+  line.style.top = `${startY + index * marqueeCconfig.spacing}px`;
+
+  // Create content container
+  const content = document.createElement('div');
+  content.className = 'marquee-content';
+
+  // Set animation direction based on odd/even index
+  if (index % 2 === 0) {
+    // Odd lines (0-indexed)
+    content.style.animationName = 'scroll-left';
+  } else {
+    // Even lines (0-indexed)
+    content.style.animationName = 'scroll-right';
+  }
+
+  // Add images (twice for seamless looping)
+  const totalImages = marqueeCconfig.imagesPerLine * 2;
+  for (let i = 0; i < totalImages; i++) {
+    const img = document.createElement('img');
+    img.className = 'marquee-image';
+    img.src = `./img/cover-chego@1x.png`;
+    img.alt = 'placeholder';
+    content.appendChild(img);
+  }
+
+  // Add line number label for clarity
+  const label = document.createElement('div');
+  label.style.position = 'absolute';
+  label.style.top = '5px';
+  label.style.left = '110px';
+  label.style.background = 'rgba(0,0,0,0.5)';
+  label.style.color = 'white';
+  label.style.padding = '2px 6px';
+  label.style.borderRadius = '3px';
+  label.style.fontSize = '10px';
+  label.style.transform = 'rotate(-20deg)'; // Counter-rotate to make text readable
+  label.textContent = `Line ${index + 1}`;
+  line.appendChild(label);
+
+  line.appendChild(content);
+  return line;
+}
+
+// Generate all marquee lines
+function generateMarquee() {
+  const container = document.getElementById('covers');
+
+  for (let i = 0; i < marqueeCconfig.lines; i++) {
+    const line = createMarqueeLine(i);
+    container.appendChild(line);
+  }
+}
+
+// Initialize on page load
+window.onload = generateMarquee;
+
+//#endregion marquee
