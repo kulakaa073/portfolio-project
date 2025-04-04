@@ -234,6 +234,12 @@ submitPopUp.addEventListener('click', e => {
   }
 });
 
+document.addEventListener('keydown', e => {
+  if (submitPopUp.style.display !== 'none' && e.key === 'Escape') {
+    submitPopUp.style.display = 'none';
+  }
+});
+
 //#region marquee
 const marqueeCconfig = {
   lines: 5,
