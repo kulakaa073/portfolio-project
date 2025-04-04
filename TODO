@@ -1,7 +1,7 @@
 Covers section: Tiled image made from "projects" images 
                 Tinker more when claude off cd
                 Try to fix jitter
-Mobile menu: +-Styles 
+Mobile menu: ++Styles 
 About section:  ++Add developer's image in the middle block 
                 ++Play with swiper to make tech stack block 
                 ++Use accordion to make foldable list for about-info 
@@ -9,7 +9,7 @@ About section:  ++Add developer's image in the middle block
                 ++Fix styles after that 
 Benefits section: ++Add svg icons for cards 
 Hero section:   ++Fix socials position 
-                +-Add background image -> fix positioning
+                ++Add background image -> fix positioning
 Projects section:   ++Add projects images 
                     ++Add swiper to section 
 FAQ section:    ++Add accordion 
@@ -22,5 +22,7 @@ Footer section: ++Add form sending script
                 ++Finish pop-up scripts to close
                 ++Styles
 +-Header section styles -> Return to header when doing tablet/desktop views
-Animations, esp hover/focus stuff
-
+++Animations, esp hover/focus stuff
+Tablet styles
+Desktop styles
+~~welcome to hell~~

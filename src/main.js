@@ -119,13 +119,13 @@ const reviewsSwiperOptions = {
 new Swiper(reviewsSwiperBlock, { ...reviewsSwiperOptions });
 
 burgerMenuButton.addEventListener('click', e => {
-  mobileMenu.style.display = 'block';
+  mobileMenu.classList.add('is-open');
   lockScroll();
 });
 
 mobileMenu.addEventListener('click', e => {
-  if (e.target.nodeName === 'A' || e.target.nodeName === 'BUTTON') {
-    mobileMenu.style.display = 'none';
+  if (e.target.nodeName === 'A' || e.target.closest('button')) {
+    mobileMenu.classList.remove('is-open');
     unlockScroll();
   }
 });
@@ -170,9 +170,9 @@ function unlockScroll() {
 
   // Scroll back to the original position
   // Change scroll behavior so it wont give you epilepsy for non-top locks
-  //document.querySelector('html').styles.scrollBehavior = 'auto';
+  document.querySelector('html').style.scrollBehavior = 'auto';
   window.scrollTo(0, parseInt(scrollY || '0'));
-  //document.querySelector('html').styles.scrollBehavior = 'smooth';
+  document.querySelector('html').style.scrollBehavior = 'smooth';
 }
 //#endregion scroll lock stuff
 
@@ -220,23 +220,21 @@ contactForm.addEventListener('submit', event => {
 function showFormSuccess(messageTitle, messageContent) {
   submitPopUp.querySelector('.submit-pop-up-title').textContent = messageTitle;
   submitPopUp.querySelector('.submit-pop-up-text').textContent = messageContent;
-  submitPopUp.style.display = 'block';
+  submitPopUp.classList.add('is-open');
   lockScroll();
 }
 
 submitPopUp.addEventListener('click', e => {
-  if (
-    e.target.classList.contains('submit-pop-up-close-button') ||
-    e.target === submitPopUp
-  ) {
-    submitPopUp.style.display = 'none';
+  if (e.target.closest('button') || e.target === submitPopUp) {
+    submitPopUp.classList.remove('is-open');
     unlockScroll();
   }
 });
 
 document.addEventListener('keydown', e => {
-  if (submitPopUp.style.display !== 'none' && e.key === 'Escape') {
-    submitPopUp.style.display = 'none';
+  if (submitPopUp.classList.contains('is-open') && e.key === 'Escape') {
+    submitPopUp.classList.remove('is-open');
+    unlockScroll();
   }
 });
 

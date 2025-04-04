@@ -62,6 +62,7 @@
   letter-spacing: -2%;
   color: #fafafa;
   padding: 13px 32px;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .check-project-button:focus,
@@ -106,6 +107,7 @@
   align-items: center;
   width: 52px;
   height: 52px;
+  transition: border 0.5s ease-in-out, fill 0.5s ease-in-out;
 }
 
 .project-swiper-controlls-prev.swiper-button-disabled,
