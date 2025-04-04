@@ -6,20 +6,21 @@ About section:  ++Add developer's image in the middle block
                 ++Play with swiper to make tech stack block 
                 ++Use accordion to make foldable list for about-info 
                 ++Clean up html for swiper
-                Fix styles after that 
-Benefits section: Add svg icons for cards 
+                ++Fix styles after that 
+Benefits section: ++Add svg icons for cards 
 Hero section:   ++Fix socials position 
                 +-Add background image -> fix positioning
-Projects section:   Add projects images 
+Projects section:   ++Add projects images 
                     ++Add swiper to section 
 FAQ section:    ++Add accordion 
-                Fix styles after that 
+                ++Fix styles after that 
 ++ !! Change margins on sections to paddings? !!
 Reviews section: ++Add swiper
-                Fix styles
+                ++Fix styles
 Footer section: ++Add form sending script
                 ++Add pop-up on sending
                 ++Finish pop-up scripts to close
-                Styles
+                ++Styles
 +-Header section styles -> Return to header when doing tablet/desktop views
+Animations, esp hover/focus stuff
 

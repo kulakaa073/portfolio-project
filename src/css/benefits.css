@@ -21,9 +21,14 @@
 .benefits-card-icon {
   width: 48px;
   height: 48px;
+  padding: 12px;
   margin-bottom: 64px;
   background-color: #ed3b44;
   border-radius: 10px;
+  fill: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefits-card-title {
@@ -49,4 +54,9 @@
   line-height: 1;
   letter-spacing: -2%;
   color: #fafafa;
+}
+
+.order-project-button:hover,
+.order-project-button:focus {
+  border: 1px solid #fafafa;
 }

@@ -7,6 +7,7 @@
   margin-right: 8px;
   width: 44px;
   height: 44px;
+  border-radius: 12px;
 }
 
 .footer-title {
@@ -35,9 +36,46 @@
   background-color: transparent;
   height: 44px;
   margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  color: #fafafa;
+  transition: border-color 0.25s ease;
 }
 
-.footer-form label:first-child input {
+.footer-form input:hover,
+.footer-form input:focus {
+  outline: none;
+  border-color: #fafafa80;
+}
+
+.footer-form input:user-valid {
+  border-color: #3cbc81;
+}
+
+.footer-form input:user-invalid {
+  border-color: #e74a3b;
+}
+
+.email-status-message {
+  display: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -2%;
+  transition: display 0.25s ease;
+}
+
+.email-status-message {
+  color: #e74a3b;
+}
+
+.email-status-message {
+  color: #3cbc81;
+}
+
+.footer-form input:first-child {
   margin-bottom: 16px;
 }
 
@@ -64,6 +102,12 @@
   background-color: #ed3b44;
   color: #fafafa;
   border: none;
+  transition: background-color 0.25s ease;
+}
+
+.footer-form-submit:hover,
+.footer-form-submit:focus {
+  background-color: #e0373f;
 }
 
 .footer-address a {
@@ -79,6 +123,12 @@
   line-height: 1;
   letter-spacing: -2%;
   color: #fafafa;
+  transition: border-color 0.25s ease;
+}
+
+.footer-address a:hover,
+.footer-address a:focus {
+  border-color: #fafafa;
 }
 
 .footer-phone {
@@ -96,6 +146,7 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  transition: display 0.5s ease;
 }
 
 .pop-up-window {

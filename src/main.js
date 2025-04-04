@@ -22,6 +22,7 @@ const aboutAccordionOptions = {
   elementClass: 'about-item',
   triggerClass: 'about-info-expand-button',
   panelClass: 'about-panel-wrap',
+  showMultiple: true,
 };
 
 new Accordion(aboutInfoBlock, { ...aboutAccordionOptions });
@@ -30,6 +31,7 @@ const faqAccordionOptions = {
   elementClass: 'faq-question-card',
   triggerClass: 'faq-expand-button',
   panelClass: 'faq-answer',
+  showMultiple: true,
 };
 
 new Accordion(faqBlock, { ...faqAccordionOptions });
@@ -168,9 +170,9 @@ function unlockScroll() {
 
   // Scroll back to the original position
   // Change scroll behavior so it wont give you epilepsy for non-top locks
-  document.querySelector('html').styles.scrollBehavior = 'auto';
+  //document.querySelector('html').styles.scrollBehavior = 'auto';
   window.scrollTo(0, parseInt(scrollY || '0'));
-  document.querySelector('html').styles.scrollBehavior = 'smooth';
+  //document.querySelector('html').styles.scrollBehavior = 'smooth';
 }
 //#endregion scroll lock stuff
 
@@ -304,6 +306,6 @@ function generateMarquee() {
 }
 
 // Initialize on page load
-window.onload = generateMarquee;
+generateMarquee();
 
 //#endregion marquee

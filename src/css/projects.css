@@ -64,6 +64,11 @@
   padding: 13px 32px;
 }
 
+.check-project-button:focus,
+.check-project-button:hover {
+  background-color: #e0373f;
+}
+
 .project-image-wrap {
   padding: 100px 0;
   display: flex;
@@ -90,7 +95,26 @@
   gap: 12px;
 }
 
-.project-list-controlls-prev,
-.project-list-controlls-next {
+.project-swiper-controlls-prev,
+.project-swiper-controlls-next {
   cursor: pointer;
+  border: 1px solid #fafafa80;
+  border-radius: 60px;
+  fill: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+}
+
+.project-swiper-controlls-prev.swiper-button-disabled,
+.project-swiper-controlls-next.swiper-button-disabled {
+  border: 1px solid #fafafa33;
+  fill: #3b3b3b;
+}
+
+.swiper-button-icon {
+  width: 24px;
+  height: 24px;
 }

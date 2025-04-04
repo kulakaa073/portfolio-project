@@ -27,3 +27,64 @@
 .faq-question-card.is-active .faq-answer {
   visibility: visible;
 }
+
+.faq-questions-list .faq-question-card:first-child {
+  border-top: 1px solid #fafafa33;
+  padding-top: 20px;
+}
+.faq-question-card {
+  border-bottom: 1px solid #fafafa33;
+}
+
+.faq-expand-button {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  color: #fafafa66;
+  text-align: left;
+  padding: 0;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  transition: padding-bottom 0.5s ease;
+}
+
+.faq-expand-button[aria-expanded='true'] {
+  padding-bottom: 0;
+}
+
+.faq-button-svg {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #fafafa33;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  fill: #fafafa;
+  transition: transform 0.5s ease;
+}
+
+.faq-button-svg:hover,
+.faq-button-svg:focus {
+  border: 1px solid #fafafa;
+}
+
+.faq-expand-button[aria-expanded='true'] .faq-button-svg {
+  transform: rotate(180deg);
+}
+
+.faq-panel-wrap {
+  overflow: hidden;
+  transition: padding 0.5s ease;
+}
+
+.faq-question-card.is-active .faq-panel-wrap {
+  padding: 16px 0 20px 0;
+}

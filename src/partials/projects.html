@@ -26,7 +26,19 @@
             </a>
           </div>
           <div class="project-image-wrap">
-            <img src="" alt="project-image" class="project-image" />
+            <picture>
+              <source
+                srcset="
+                  img/project-1-image@1x.png 1x,
+                  img/project-1-image@2x.png 2x
+                "
+              />
+              <img
+                src="img/project-1-image@1x.png"
+                alt="project-image"
+                class="project-image"
+              />
+            </picture>
           </div>
         </li>
         <li class="project-card">
@@ -52,7 +64,19 @@
             </a>
           </div>
           <div class="project-image-wrap">
-            <img src="" alt="project-image" class="project-image" />
+            <picture>
+              <source
+                srcset="
+                  img/project-2-image@1x.png 1x,
+                  img/project-2-image@2x.png 2x
+                "
+              />
+              <img
+                src="img/project-2-image@1x.png"
+                alt="project-image"
+                class="project-image"
+              />
+            </picture>
           </div>
         </li>
         <li class="project-card">
@@ -78,14 +102,34 @@
             </a>
           </div>
           <div class="project-image-wrap">
-            <img src="" alt="project-image" class="project-image" />
+            <picture>
+              <source
+                srcset="
+                  img/project-3-image@1x.png 1x,
+                  img/project-3-image@2x.png 2x
+                "
+              />
+              <img
+                src="img/project-3-image@1x.png"
+                alt="project-image"
+                class="project-image"
+              />
+            </picture>
           </div>
         </li>
       </ul>
     </div>
     <div class="project-swiper-controlls-wrap">
-      <div class="project-swiper-controlls-prev">/-</div>
-      <div class="project-swiper-controlls-next">-></div>
+      <div class="project-swiper-controlls-prev">
+        <svg class="swiper-button-icon">
+          <use href="./img/sprites.svg#icon-arrow-left" alt="<-"></use>
+        </svg>
+      </div>
+      <div class="project-swiper-controlls-next">
+        <svg class="swiper-button-icon">
+          <use href="./img/sprites.svg#icon-arrow-right" alt="->"></use>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
