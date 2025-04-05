@@ -161,7 +161,7 @@
 
 @media screen and (min-width: 768px) {
   .footer-form input:first-child {
-    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
