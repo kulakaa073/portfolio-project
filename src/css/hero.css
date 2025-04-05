@@ -33,10 +33,10 @@
     #69292d 67.71%,
     #ed3b44 99.91%
   );*/
-  position: relative;
 }
 
 .hero-container {
+  position: relative;
   padding-top: 281px;
   padding-bottom: 281px;
   background-image: url(../img/hero-cover-red-mobile@1x.png);
