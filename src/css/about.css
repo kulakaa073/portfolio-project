@@ -1,5 +1,5 @@
 .about {
-  padding: 64px 0 32px 0;
+  padding: 96px 0 48px 0;
 }
 
 .about-wrap {
@@ -24,6 +24,16 @@
   border-radius: 25px;
 }
 
+@media screen and (min-width: 768px) {
+  .about-text {
+    padding: 64px;
+    font-size: 38px;
+    line-height: 40px;
+    height: 700px;
+    border-radius: 24px;
+  }
+}
+
 .about-item.js-enabled .about-panel-wrap {
   visibility: hidden;
 }
@@ -45,6 +55,14 @@
   border-radius: 24px;
   background-color: aliceblue;
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-img {
+    width: 704px;
+    height: 700px;
+    margin-bottom: 64px;
+  }
 }
 
 .about-info {
@@ -106,6 +124,14 @@
   transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
+@media screen and (min-width: 768px) {
+  .about-button-svg {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+}
+
 .about-info-expand-button:hover .about-button-svg,
 .about-info-expand-button:focus .about-button-svg {
   border: 1px solid #fafafa;
@@ -123,6 +149,12 @@
   width: 260px;
   overflow: hidden;
   margin: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .about-swiper {
+    width: 600px;
+  }
 }
 
 .tech-stack {
@@ -149,6 +181,14 @@
   align-items: center;
   transition: fill 0.5s ease-in-out;
 }
+
+@media screen and (min-width: 768px) {
+  .about-swiper-button-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .about-swiper-button-next:hover .about-swiper-button-icon,
 .about-swiper-button-next:focus .about-swiper-button-icon {
   fill: #fafafa;
@@ -168,6 +208,17 @@
   height: 130px;
   border-radius: 80px;
   transition: background-color 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .tech-name p {
+    width: 200px;
+    height: 200px;
+    border-radius: 110px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -2%;
+  }
 }
 
 .tech-name.swiper-slide-active p {

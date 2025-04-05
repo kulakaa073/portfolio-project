@@ -1,5 +1,5 @@
 .reviews {
-  padding: 64px 0;
+  padding: 96px 0;
 }
 
 .reviews-title {
@@ -75,4 +75,12 @@
 .review-swiper-controlls-next.swiper-button-disabled {
   border: 1px solid #fafafa33;
   fill: #3b3b3b;
+}
+
+@media screen and (min-width: 768px) {
+  .review-swiper-controlls-prev,
+  .review-swiper-controlls-next {
+    width: 68px;
+    height: 68px;
+  }
 }

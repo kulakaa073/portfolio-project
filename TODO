@@ -23,6 +23,7 @@ Footer section: ++Add form sending script
                 ++Styles
 +-Header section styles -> Return to header when doing tablet/desktop views
 ++Animations, esp hover/focus stuff
-Tablet styles
+++Tablet styles
 Desktop styles
 ~~welcome to hell~~
+Work together (footer): check for input overflows later

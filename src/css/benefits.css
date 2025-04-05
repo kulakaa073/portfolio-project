@@ -1,11 +1,20 @@
 .benefits {
-  padding: 32px 0;
+  padding: 48px 0;
 }
 .benefits-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px 16px;
+    margin-bottom: 64px;
+  }
 }
 
 .benefits-title {
@@ -16,6 +25,12 @@
   padding: 24px;
   background-color: #242527;
   border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-card {
+    width: 344px;
+  }
 }
 
 .benefits-card-icon {

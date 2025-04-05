@@ -41,6 +41,18 @@
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url(../img/hero-cover-red-tablet@1x.png);
+  }
+
+  @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(../img/hero-cover-red-tablet@2x.png);
+    }
+  }
+}
+
 .hero-title {
   font-weight: 500;
   font-size: 50px;
@@ -49,6 +61,11 @@
   text-transform: uppercase;
   color: #fafafa;
 }
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 90px;
+  }
+}
 
 .socials {
   position: relative;
@@ -56,6 +73,12 @@
   flex-direction: row;
   gap: 4px;
   bottom: -249px;
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    left: 240px;
+  }
 }
 
 .socials > li {
@@ -74,6 +97,15 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+  .socials > li {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    padding: 18px 0;
+  }
+}
+
 .socials li:hover,
 .socials li:focus {
   border: 1px solid #fafafa;
@@ -82,4 +114,18 @@
 .socials li:last-child {
   padding: 10px 12px;
   width: unset;
+}
+
+@media screen and (min-width: 768px) {
+  .socials > li {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    padding: 18px 0;
+  }
+
+  .socials li:last-child {
+    padding: 18px 24px;
+    width: unset;
+  }
 }

@@ -1,5 +1,5 @@
 .work-together {
-  padding: 32px 0;
+  padding: 88px 0 169px 0;
 }
 
 .footer-logo {
@@ -8,6 +8,15 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    border-radius: 24px;
+  }
 }
 
 .footer-title {
@@ -20,12 +29,38 @@
   display: inline;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-title {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
 .footer-title-span {
   color: #ed3b44;
 }
 
 .footer-title-wrap {
   margin-bottom: 63px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-title-wrap {
+    margin-bottom: 18px;
+  }
+}
+
+.footer-form {
+  margin-bottom: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 18px;
+  }
 }
 
 .footer-form input {
@@ -42,6 +77,13 @@
   letter-spacing: -2%;
   color: #fafafa;
   transition: border-color 0.25s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form input {
+    width: 245px;
+    margin: 0;
+  }
 }
 
 .footer-form input:hover,
@@ -79,8 +121,10 @@
   margin-bottom: 16px;
 }
 
-.footer-form {
-  margin-bottom: 64px;
+@media screen and (min-width: 768px) {
+  .footer-form input:first-child {
+    margin: 0;
+  }
 }
 
 .footer-form input::placeholder {
@@ -103,6 +147,14 @@
   color: #fafafa;
   border: none;
   transition: background-color 0.25s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form-submit {
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+  }
 }
 
 .footer-form-submit:hover,
@@ -131,8 +183,28 @@
   border-color: #fafafa;
 }
 
+.footer-email {
+  margin-right: 4px;
+}
+
 .footer-phone {
   padding: 10px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-address a {
+    height: 55px;
+    font-size: 16px;
+    padding: 18px 32px;
+  }
+
+  .footer-email {
+    margin-right: 8px;
+  }
+
+  .footer-phone {
+    padding: 18px 32px;
+  }
 }
 
 .submit-pop-up {

@@ -1,6 +1,6 @@
 .faq {
-  padding-bottom: 64px;
-  padding-top: 32px;
+  padding-bottom: 96px;
+  padding-top: 48px;
 }
 
 .faq-title {
@@ -69,6 +69,14 @@
   padding: 7px;
   fill: #fafafa;
   transition: transform 0.5s ease, border 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .faq-button-svg {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
 }
 
 .faq-expand-button:hover .faq-button-svg,

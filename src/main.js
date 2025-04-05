@@ -17,6 +17,7 @@ const reviewsSwiperBlock = document.querySelector('.reviews-swiper');
 const reviewsBlock = document.querySelector('.reviews-list');
 const contactForm = document.querySelector('.footer-form');
 const submitPopUp = document.querySelector('.submit-pop-up');
+const viewportWidth = visualViewport.width;
 
 const aboutAccordionOptions = {
   elementClass: 'about-item',
@@ -25,8 +26,6 @@ const aboutAccordionOptions = {
   showMultiple: true,
 };
 
-new Accordion(aboutInfoBlock, { ...aboutAccordionOptions });
-
 const faqAccordionOptions = {
   elementClass: 'faq-question-card',
   triggerClass: 'faq-expand-button',
@@ -34,6 +33,7 @@ const faqAccordionOptions = {
   showMultiple: true,
 };
 
+new Accordion(aboutInfoBlock, { ...aboutAccordionOptions });
 new Accordion(faqBlock, { ...faqAccordionOptions });
 
 const aboutSwiperOptions = {
@@ -49,9 +49,8 @@ const aboutSwiperOptions = {
     enabled: true,
     onlyInViewport: true,
   },
+  oneWayMovement: true,
 };
-
-new Swiper(aboutSwiperBlock, { ...aboutSwiperOptions });
 
 const projectSwiperOptions = {
   modules: [Navigation, Keyboard],
@@ -68,7 +67,51 @@ const projectSwiperOptions = {
   spaceBetween: 10,
 };
 
-new Swiper(projectsSwiperBlock, { ...projectSwiperOptions });
+const reviewsSwiperOptions = {
+  modules: [Navigation, Keyboard],
+  navigation: {
+    nextEl: '.review-swiper-controlls-next',
+    prevEl: '.review-swiper-controlls-prev',
+  },
+  wrapperClass: 'reviews-list',
+  slideClass: 'review-card',
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  spaceBetween: 10,
+};
+let aboutSwiper;
+let reviewsSwiper;
+window.addEventListener('load', () => {
+  if (viewportWidth > 767) {
+    aboutSwiperOptions.slidesPerView = 3;
+    reviewsSwiperOptions.slidesPerView = 2;
+  }
+  if (viewportWidth > 1439) {
+    aboutSwiperOptions.slidesPerView = 6;
+    reviewsSwiperOptions.slidesPerView = 4;
+  }
+  aboutSwiper = new Swiper(aboutSwiperBlock, { ...aboutSwiperOptions });
+  new Swiper(projectsSwiperBlock, { ...projectSwiperOptions });
+  reviewsSwiper = new Swiper(reviewsSwiperBlock, { ...reviewsSwiperOptions });
+});
+
+visualViewport.addEventListener('resize', () => {
+  const newWidth = visualViewport.width;
+  if (aboutSwiper) {
+    if (newWidth < 768) aboutSwiper.params.slidesPerView = 2;
+    if (newWidth > 767) aboutSwiper.params.slidesPerView = 3;
+    if (newWidth > 1439) aboutSwiper.params.slidesPerView = 6;
+    aboutSwiper.update();
+  }
+  if (reviewsSwiper) {
+    if (newWidth < 768) reviewsSwiper.params.slidesPerView = 1;
+    if (newWidth > 767) reviewsSwiper.params.slidesPerView = 2;
+    if (newWidth > 1439) reviewsSwiper.params.slidesPerView = 4;
+    reviewsSwiper.update();
+  }
+});
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
 axios
@@ -101,23 +144,6 @@ function renderReviewList(renderData) {
   reviewsBlock.insertAdjacentHTML('afterbegin', responseBlockMarkup.join(''));
 }
 
-const reviewsSwiperOptions = {
-  modules: [Navigation, Keyboard],
-  navigation: {
-    nextEl: '.review-swiper-controlls-next',
-    prevEl: '.review-swiper-controlls-prev',
-  },
-  wrapperClass: 'reviews-list',
-  slideClass: 'review-card',
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-  spaceBetween: 10,
-};
-
-new Swiper(reviewsSwiperBlock, { ...reviewsSwiperOptions });
-
 burgerMenuButton.addEventListener('click', e => {
   mobileMenu.classList.add('is-open');
   lockScroll();
@@ -128,16 +154,6 @@ mobileMenu.addEventListener('click', e => {
     mobileMenu.classList.remove('is-open');
     unlockScroll();
   }
-});
-
-navBlock.addEventListener('click', e => {
-  console.log(navMenu.classList.contains('visually-hidden'));
-  if (e.target === navMenuButton) {
-    if (navMenu.classList.contains('visually-hidden'))
-      navMenu.classList.remove('visually-hidden');
-    else navMenu.classList.add('visually-hidden');
-  } else if (!navMenu.classList.contains('visually-hidden'))
-    navMenu.classList.add('visually-hidden');
 });
 
 //#region scroll lock stuff
@@ -236,6 +252,15 @@ document.addEventListener('keydown', e => {
     submitPopUp.classList.remove('is-open');
     unlockScroll();
   }
+});
+
+document.addEventListener('click', e => {
+  if (e.target === navMenuButton) {
+    if (navMenu.classList.contains('visually-hidden'))
+      navMenu.classList.remove('visually-hidden');
+    else navMenu.classList.add('visually-hidden');
+  } else if (!navMenu.classList.contains('visually-hidden'))
+    navMenu.classList.add('visually-hidden');
 });
 
 //#region marquee
