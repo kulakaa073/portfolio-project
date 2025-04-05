@@ -1,6 +1,20 @@
 .faq {
-  padding-bottom: 96px;
-  padding-top: 48px;
+  padding-bottom: 64px;
+  padding-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq {
+    padding-bottom: 96px;
+    padding-top: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .faq {
+    padding-bottom: 82px;
+    padding-top: 164px;
+  }
 }
 
 .faq-title {

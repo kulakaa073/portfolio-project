@@ -21,9 +21,11 @@ Footer section: ++Add form sending script
                 ++Add pop-up on sending
                 ++Finish pop-up scripts to close
                 ++Styles
-+-Header section styles -> Return to header when doing tablet/desktop views
+++Header section styles -> Return to header when doing tablet/desktop views
 ++Animations, esp hover/focus stuff
 ++Tablet styles
-Desktop styles
+++Desktop styles
 ~~welcome to hell~~
-Work together (footer): check for input overflows later
+++Work together (footer): check for input overflows later
+
+!! Fix hero socials position

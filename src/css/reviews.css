@@ -1,5 +1,17 @@
 .reviews {
-  padding: 96px 0;
+  padding: 64px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding: 96px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews {
+    padding: 164px 0;
+  }
 }
 
 .reviews-title {

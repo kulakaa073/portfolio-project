@@ -1,5 +1,17 @@
 .projects {
-  padding: 48px 0;
+  padding: 32px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    padding: 48px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .projects {
+    padding: 82px 0;
+  }
 }
 
 .projects-title {
@@ -16,18 +28,32 @@
   background-color: #242527;
 }
 
+@media screen and (min-width: 1440px) {
+  .project-card {
+    display: flex;
+  }
+}
+
 .project-card-wrap {
   width: 343px;
   padding: 32px;
   background-color: #fafafa;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 @media screen and (min-width: 768px) {
   .project-card-wrap {
     width: 704px;
     padding: 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .project-card-wrap {
+    width: 688px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 24px;
   }
 }
 
@@ -59,6 +85,12 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .project-tech-used {
+    margin-bottom: 223px;
+  }
+}
+
 .project-card-descr {
   font-weight: 500;
   font-size: 24px;
@@ -73,6 +105,12 @@
     font-weight: 500;
     font-size: 44px;
     line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .project-card-descr {
+    width: 494px;
   }
 }
 
@@ -114,6 +152,12 @@
   }
 }
 
+@media screen and (min-width: 1440) {
+  .project-image-wrap {
+    width: 688px;
+  }
+}
+
 .project-image {
   width: 311px;
   height: 195px;
@@ -124,6 +168,7 @@
 @media screen and (min-width: 768px) {
   .project-image-wrap {
     padding: 120px 0;
+    width: 688px;
   }
 
   .project-image {
@@ -135,6 +180,12 @@
 .projects-swiper {
   overflow: hidden;
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1440px) {
+  .projects-swiper {
+    width: 1376px;
+  }
 }
 
 .project-swiper-controlls-wrap {

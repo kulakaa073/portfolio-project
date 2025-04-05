@@ -1,6 +1,19 @@
 .benefits {
-  padding: 48px 0;
+  padding: 32px 0;
 }
+
+@media screen and (min-width: 768px) {
+  .benefits {
+    padding: 48px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .benefits {
+    padding: 82px 0;
+  }
+}
+
 .benefits-list {
   display: flex;
   flex-direction: column;
@@ -75,4 +88,27 @@
 .order-project-button:hover,
 .order-project-button:focus {
   border: 1px solid #fafafa;
+}
+
+@media screen and (min-width: 1440px) {
+  .benefits {
+    padding: 82px 0;
+  }
+  .benefits-title {
+    width: 284px;
+    margin: 0;
+  }
+
+  .benefits-list {
+    width: 680px;
+  }
+
+  .benefits-card {
+    width: 332px;
+  }
+
+  .benefits-wrap {
+    display: flex;
+    gap: 412px;
+  }
 }

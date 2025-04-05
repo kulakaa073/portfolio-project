@@ -17,6 +17,7 @@ const reviewsSwiperBlock = document.querySelector('.reviews-swiper');
 const reviewsBlock = document.querySelector('.reviews-list');
 const contactForm = document.querySelector('.footer-form');
 const submitPopUp = document.querySelector('.submit-pop-up');
+const techStackBlock = document.querySelector('.tech-stack');
 const viewportWidth = visualViewport.width;
 
 const aboutAccordionOptions = {
@@ -79,7 +80,7 @@ const reviewsSwiperOptions = {
     enabled: true,
     onlyInViewport: true,
   },
-  spaceBetween: 10,
+  spaceBetween: 16,
 };
 let aboutSwiper;
 let reviewsSwiper;
@@ -89,20 +90,33 @@ window.addEventListener('load', () => {
     reviewsSwiperOptions.slidesPerView = 2;
   }
   if (viewportWidth > 1439) {
+    techStackBlockExpand();
     aboutSwiperOptions.slidesPerView = 6;
     reviewsSwiperOptions.slidesPerView = 4;
   }
   aboutSwiper = new Swiper(aboutSwiperBlock, { ...aboutSwiperOptions });
-  new Swiper(projectsSwiperBlock, { ...projectSwiperOptions });
+  const debugSwiper = new Swiper(projectsSwiperBlock, {
+    ...projectSwiperOptions,
+  });
+  console.log(debugSwiper);
   reviewsSwiper = new Swiper(reviewsSwiperBlock, { ...reviewsSwiperOptions });
 });
 
 visualViewport.addEventListener('resize', () => {
   const newWidth = visualViewport.width;
   if (aboutSwiper) {
-    if (newWidth < 768) aboutSwiper.params.slidesPerView = 2;
-    if (newWidth > 767) aboutSwiper.params.slidesPerView = 3;
-    if (newWidth > 1439) aboutSwiper.params.slidesPerView = 6;
+    if (newWidth < 768) {
+      techStackBlockRestore();
+      aboutSwiper.params.slidesPerView = 2;
+    }
+    if (newWidth > 767) {
+      techStackBlockRestore();
+      aboutSwiper.params.slidesPerView = 3;
+    }
+    if (newWidth > 1439) {
+      techStackBlockExpand();
+      aboutSwiper.params.slidesPerView = 6;
+    }
     aboutSwiper.update();
   }
   if (reviewsSwiper) {
@@ -112,6 +126,31 @@ visualViewport.addEventListener('resize', () => {
     reviewsSwiper.update();
   }
 });
+
+function techStackBlockExpand() {
+  techStackBlock.insertAdjacentHTML(
+    'beforeend',
+    `<li class="tech-name"><p>HTML/CSS</p></li>
+          <li class="tech-name"><p>JavaScript</p></li>
+          <li class="tech-name"><p>React</p></li>
+          <li class="tech-name"><p>Node. js</p></li>
+          <li class="tech-name"><p>React Native</p></li>
+          <li class="tech-name"><p>Soft skills</p></li>`
+  );
+}
+
+function techStackBlockRestore() {
+  techStackBlock.innerHTML = '';
+  techStackBlock.insertAdjacentHTML(
+    'beforeend',
+    ` <li class="tech-name"><p>HTML/CSS</p></li>
+          <li class="tech-name"><p>JavaScript</p></li>
+          <li class="tech-name"><p>React</p></li>
+          <li class="tech-name"><p>Node. js</p></li>
+          <li class="tech-name"><p>React Native</p></li>
+          <li class="tech-name"><p>Soft skills</p></li>`
+  );
+}
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
 axios
