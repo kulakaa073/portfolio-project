@@ -1,0 +1,54 @@
+
+URI : https://kulakaa073.github.io/portfolio-project/assets/index-BG7RmZ8M.css
+1 	h2 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	h3 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.header-container 	baseline-top is not a align-items value : baseline-top
+1 	.nav-menu-button 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.nav-link 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.header-logo-link 	baseline-top is not a align-items value : baseline-top
+1 	.header-order-button 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.hero-title 	Value Error : letter-spacing -3% is not a letter-spacing value : -3%
+1 	.socials > li 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.about-text 	Value Error : letter-spacing -3% is not a letter-spacing value : -3%
+1 	.about-info-text 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.about-info-expand-button 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.tech-name p 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.benefits-card-descr 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.order-project-button 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.project-tech-used li 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.project-card-descr 	Value Error : letter-spacing -3% is not a letter-spacing value : -3%
+1 	.check-project-button 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 		only 0 can be a unit. You must put a unit after your number
+1 	.faq-answer 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.faq-expand-button 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.review-text 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.footer-title 	Value Error : letter-spacing -3% is not a letter-spacing value : -3%
+1 	.footer-form input 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 		Unknown pseudo-element or pseudo-class :user-valid
+1 	.email-status-message 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.footer-form input::placeholder 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.footer-form-submit 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.footer-address a 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.submit-pop-up-title 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.submit-pop-up-text 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+1 	.mobile-menu 	Value Error : letter-spacing -2% is not a letter-spacing value : -2%
+
+↑ Top
+
+W3Cx logo
+
+Interested in “developing” your developer skills? In W3Cx’s hands-on Professional Certificate Program, learn how to code the right way by creating Web sites and apps that use the latest Web standards. Find out more!
+
+Donate and help us build better tools for a better web.
+Warnings (26)
+URI : https://kulakaa073.github.io/portfolio-project/assets/index-BG7RmZ8M.css
+1 		system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif is a vendor extension
+1 		-webkit-font-smoothing is a vendor extension
+1 		-moz-osx-font-smoothing is a vendor extension
+1 		-webkit-text-size-adjust is a vendor extension
+1 		The property clip is deprecated
+1 		Invalid separator in shape definition. It must be a comma.
+1 		auto is not defined by any specification as an allowed value for pointer-events, but is supported in multiple browsers
+1 		Family names containing whitespace should be quoted. If quoting is omitted, any whitespace characters before and after the name are ignored and any sequence of whitespace characters inside the name is converted to a single space.
+1 		Family names containing whitespace should be quoted. If quoting is omitted, any whitespace characters before and after the name are ignored and any sequence of whitespace characters inside the name is converted to a single space.
+1 		Family names containing whitespace should be quoted. If quoting is omitted, any whitespace characters before and after the name are ignored and any sequence of whitespace characters inside the name is converted to a single space. 

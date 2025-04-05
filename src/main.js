@@ -18,7 +18,10 @@ const reviewsBlock = document.querySelector('.reviews-list');
 const contactForm = document.querySelector('.footer-form');
 const submitPopUp = document.querySelector('.submit-pop-up');
 const techStackBlock = document.querySelector('.tech-stack');
-const viewportWidth = visualViewport.width;
+//document.documentElement.clientWidth and visualViewport.width doesnt include scrollbar
+//which in turn makes janky interactions with breakpoints
+//because @media (min-width) takes window.innerWidth that include scrollbar width
+const viewportWidth = window.innerWidth;
 
 const aboutAccordionOptions = {
   elementClass: 'about-item',
@@ -82,9 +85,16 @@ const reviewsSwiperOptions = {
   },
   spaceBetween: 16,
 };
+
 let aboutSwiper;
 let reviewsSwiper;
 window.addEventListener('load', () => {
+  console.log(visualViewport.width);
+  console.log('window.innerWidth:', window.innerWidth);
+  console.log(
+    'document.documentElement.clientWidth:',
+    document.documentElement.clientWidth
+  );
   if (viewportWidth > 767) {
     aboutSwiperOptions.slidesPerView = 3;
     reviewsSwiperOptions.slidesPerView = 2;
@@ -98,22 +108,10 @@ window.addEventListener('load', () => {
   new Swiper(projectsSwiperBlock, {
     ...projectSwiperOptions,
   });
-
-  axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
-  axios
-    .get('reviews')
-    .then(function (response) {
-      renderReviewList(response.data);
-      reviewsSwiper = new Swiper(reviewsSwiperBlock, {
-        ...reviewsSwiperOptions,
-      });
-    })
-    .catch(function (err) {
-      console.log(err);
-      reviewsBlock.style.display = 'none';
-      document.querySelector('.reviews-fetch-error').style.display = 'block';
-      alert(err);
-    });
+  reviewsSwiper = new Swiper(reviewsSwiperBlock, {
+    ...reviewsSwiperOptions,
+  });
+  console.log(reviewsSwiper);
 });
 
 visualViewport.addEventListener('resize', () => {
@@ -140,6 +138,19 @@ visualViewport.addEventListener('resize', () => {
     reviewsSwiper.update();
   }
 });
+
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
+axios
+  .get('reviews')
+  .then(async function (response) {
+    await renderReviewList(response.data);
+  })
+  .catch(function (err) {
+    console.log(err);
+    reviewsBlock.style.display = 'none';
+    document.querySelector('.reviews-fetch-error').style.display = 'block';
+    alert(err);
+  });
 
 function techStackBlockExpand() {
   techStackBlock.insertAdjacentHTML(

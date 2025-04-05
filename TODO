@@ -29,3 +29,5 @@ Footer section: ++Add form sending script
 ++Work together (footer): check for input overflows later
 
 ++!! Fix hero socials position
+Fix css errors https://jigsaw.w3.org/css-validator/validator
+Check performance issues https://pagespeed.web.dev/analysis
