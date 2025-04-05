@@ -89,12 +89,6 @@ const reviewsSwiperOptions = {
 let aboutSwiper;
 let reviewsSwiper;
 window.addEventListener('load', () => {
-  console.log(visualViewport.width);
-  console.log('window.innerWidth:', window.innerWidth);
-  console.log(
-    'document.documentElement.clientWidth:',
-    document.documentElement.clientWidth
-  );
   if (viewportWidth > 767) {
     aboutSwiperOptions.slidesPerView = 3;
     reviewsSwiperOptions.slidesPerView = 2;
@@ -111,11 +105,10 @@ window.addEventListener('load', () => {
   reviewsSwiper = new Swiper(reviewsSwiperBlock, {
     ...reviewsSwiperOptions,
   });
-  console.log(reviewsSwiper);
 });
 
-visualViewport.addEventListener('resize', () => {
-  const newWidth = visualViewport.width;
+window.addEventListener('resize', () => {
+  const newWidth = window.innerWidth;
   if (aboutSwiper) {
     if (newWidth < 768) {
       techStackBlockRestore();
