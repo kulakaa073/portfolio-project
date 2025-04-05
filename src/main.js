@@ -95,11 +95,25 @@ window.addEventListener('load', () => {
     reviewsSwiperOptions.slidesPerView = 4;
   }
   aboutSwiper = new Swiper(aboutSwiperBlock, { ...aboutSwiperOptions });
-  const debugSwiper = new Swiper(projectsSwiperBlock, {
+  new Swiper(projectsSwiperBlock, {
     ...projectSwiperOptions,
   });
-  console.log(debugSwiper);
-  reviewsSwiper = new Swiper(reviewsSwiperBlock, { ...reviewsSwiperOptions });
+
+  axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
+  axios
+    .get('reviews')
+    .then(function (response) {
+      renderReviewList(response.data);
+      reviewsSwiper = new Swiper(reviewsSwiperBlock, {
+        ...reviewsSwiperOptions,
+      });
+    })
+    .catch(function (err) {
+      console.log(err);
+      reviewsBlock.style.display = 'none';
+      document.querySelector('.reviews-fetch-error').style.display = 'block';
+      alert(err);
+    });
 });
 
 visualViewport.addEventListener('resize', () => {
@@ -151,19 +165,6 @@ function techStackBlockRestore() {
           <li class="tech-name"><p>Soft skills</p></li>`
   );
 }
-
-axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
-axios
-  .get('reviews')
-  .then(function (response) {
-    renderReviewList(response.data);
-  })
-  .catch(function (err) {
-    console.log(err);
-    reviewsBlock.style.display = 'none';
-    document.querySelector('.reviews-fetch-error').style.display = 'block';
-    alert(err);
-  });
 
 function renderReviewList(renderData) {
   const responseBlockMarkup = [];
