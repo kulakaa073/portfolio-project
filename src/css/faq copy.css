@@ -21,11 +21,25 @@
   margin-bottom: 32px;
 }
 
+.faq-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .faq-questions-list {
+    flex-wrap: wrap;
+    gap: 0;
+    height: 332px;
+  }
+}
+
 .faq-answer {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -0.02em;
+  letter-spacing: -2%;
   color: #fafafa99;
 }
 
@@ -36,8 +50,12 @@
   visibility: visible;
 }
 
-.faq-question-card {
+.faq-questions-list .faq-question-card:first-child {
   border-top: 1px solid #fafafa33;
+  padding-top: 20px;
+}
+
+.faq-question-card {
   border-bottom: 1px solid #fafafa33;
 }
 
@@ -46,21 +64,17 @@
   border: none;
   background-color: transparent;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  color: #fafafa66;
   text-align: left;
-  padding: 20px 0;
+  padding: 0;
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   transition: padding-bottom 0.5s ease;
-}
-
-@media screen and (min-width: 768px) {
-  .faq-expand-button {
-    padding: 32px 0;
-  }
 }
 
 .faq-expand-button[aria-expanded='true'] {
@@ -104,37 +118,4 @@
 
 .faq-question-card.is-active .faq-panel-wrap {
   padding: 16px 0 20px 0;
-}
-
-@media screen and (min-width: 768px) {
-  .faq-question-card.is-active .faq-panel-wrap {
-    padding: 16px 0 24px 0;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .faq-questions-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-auto-flow: column;
-    height: auto;
-  }
-
-  .faq-question-card.is-active .faq-panel-wrap {
-    padding: 11px 0 26px 0;
-  }
-
-  .faq-question-card:nth-child(1),
-  .faq-question-card:nth-child(2),
-  .faq-question-card:nth-child(3) {
-    padding-right: 32px;
-    border-right: 1px solid #fafafa33;
-  }
-
-  .faq-question-card:nth-child(4),
-  .faq-question-card:nth-child(5),
-  .faq-question-card:nth-child(6) {
-    padding-left: 32px;
-  }
 }

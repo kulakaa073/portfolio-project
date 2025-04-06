@@ -39,7 +39,7 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 1;
-  letter-spacing: -3%;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
   display: inline;
@@ -102,7 +102,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   color: #fafafa;
   transition: border-color 0.25s ease-in-out;
   white-space: nowrap;
@@ -143,7 +143,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   transition: display 0.25s ease;
 }
 
@@ -175,7 +175,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   color: #fafafa99;
 }
 
@@ -186,7 +186,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1%;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   background-color: #ed3b44;
   color: #fafafa;
   border: none;
@@ -217,7 +217,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   color: #fafafa;
   transition: border-color 0.25s ease-in-out;
 }
@@ -292,7 +292,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   text-align: center;
   color: #fafafa;
   margin-bottom: 16px;
@@ -302,7 +302,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   text-align: center;
   color: #fafafa99;
 }

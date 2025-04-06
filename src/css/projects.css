@@ -70,8 +70,7 @@
   padding: 13px 18px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   color: #1c1d20;
 }
 
@@ -95,7 +94,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
-  letter-spacing: -3%;
+  letter-spacing: -0.03em;
   color: #1c1d20;
   padding-bottom: 32px;
 }
@@ -104,7 +103,6 @@
   .project-card-descr {
     font-weight: 500;
     font-size: 44px;
-    line-height: 1;
   }
 }
 
@@ -121,8 +119,7 @@
   font-family: Inter Tight;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   color: #fafafa;
   padding: 13px 32px;
   transition: background-color 0.5s ease-in-out;
