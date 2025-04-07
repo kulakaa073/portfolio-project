@@ -1,50 +1,80 @@
 .covers {
   height: 508px;
-  background-color: aliceblue;
+}
+@media only screen and (min-width: 768px) {
+  .covers {
+    height: 960px;
+  }
+}
+
+.covers-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(./../img/cover-background.png);
+  background-size: 1108px 784px;
+  background-position: bottom -169px right -250px;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) {
+  .covers-container {
+    background-size: 1288px 1004px;
+    background-position: bottom 71px right -150px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .covers-container {
+    background-size: 1528px 1064px;
+    background-position: bottom -55px left 171px;
+  }
+}
+
+.carousel-wrapper {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 24px);
+  transform: translateY(-50%) rotate(17deg);
   width: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
-.marquee-line {
-  width: 150%;
-  height: 60px;
-  transform: rotate(20deg); /* Changed from 45deg to 20deg for flatter angle */
-  transform-origin: center; /* Changed transform origin to center */
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: rgba(0, 0, 0, 0.05);
-  left: -10%; /* Pull back to prevent cutoff */
-}
-
-.marquee-content {
-  display: inline-flex;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.marquee-image {
-  height: 50px;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
+@media only screen and (min-width: 768px) {
+  .carousel-wrapper {
+    top: calc(50% - 43px);
   }
 }
 
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
+.carousel {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  transition: transform 15s ease-in-out;
+}
+@media only screen and (min-width: 768px) {
+  .carousel {
+    gap: 62px;
+    margin-bottom: 43px;
   }
-  100% {
-    transform: translateX(0);
+  .carousel-from-start {
+    gap: 40px;
+  }
+}
+
+.slide {
+  flex: 0 0 282px;
+  height: 162px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .slide {
+    flex: 0 0 544px;
+    height: 314px;
   }
 }
