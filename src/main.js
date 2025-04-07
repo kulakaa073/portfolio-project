@@ -3,6 +3,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import axios from 'axios';
+import './js/covers.js';
 
 const burgerMenuButton = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.mobile-menu-overlay');
